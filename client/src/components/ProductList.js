@@ -1,0 +1,21 @@
+import React from 'react';
+import ProductCard from './ProductCard';
+import '../styles/ProductList.css';
+
+function ProductList({ products, onEdit, onDelete }) {
+    console.log(products)
+    return (
+        <div className="product-list">
+        {products.map((product) => (
+            <ProductCard
+            key={product.id}
+            product={product}
+            onEdit={() => onEdit(product)} // Ensure onEdit is a function that handles editing
+            onDelete={onDelete}
+            />
+            ))}
+      </div>
+    );
+}
+
+export default ProductList;
