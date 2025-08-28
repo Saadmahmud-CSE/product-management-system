@@ -1,0 +1,6 @@
+# Node.js (React client)
+client/node_modules/
+
+# Go
+backend/go.mod
+backend/database
