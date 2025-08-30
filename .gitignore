@@ -2,5 +2,7 @@
 client/node_modules/
 
 # Go
-backend/go.mod
 backend/database
+backend/.env
+backend/go.mod
+backend/go.sum
