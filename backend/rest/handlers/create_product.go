@@ -17,8 +17,8 @@ func CreateProduct(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid Product Data", 400)
 		return
 	}
-	newProduct.ID = len(database.ProductList) + 1 // Assign a new ID
-	database.ProductList = append(database.ProductList, newProduct)
 
-	util.SendData(w, newProduct, 201)
+	createdProduct := database.Store(newProduct)
+
+	util.SendData(w, createdProduct, 201)
 }
